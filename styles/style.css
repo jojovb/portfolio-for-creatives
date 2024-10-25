@@ -81,11 +81,11 @@ html {
   --body-typeface: "Libre Franklin", sans-serif;
   --heading-typeface: "Kite One", sans-serif;
   --project-title-typeface: "Kite One", sans-serif;
-  --background-color: #fdfdfd;
-  --background-color-about: #f5f5f5;
-  --background-color-footer: #f5f5f5;
+  --background-color: #efeee9;
+  --background-color-about: #efeee9;
+  --background-color-footer: #efeee9;
   --alt-background-color: #000000;
-  --background-color-holding-page: rgba(82, 0, 255, 0.6);
+  --background-color-holding-page: #96a8fe;
   --h1-color: #5200ff;
   --h2-color: #5200ff;
   --h3-color: #5200ff;
@@ -99,18 +99,18 @@ html {
   --overlay-title-color: #ffffff;
   --overlay-description-color: #ffffff;
   --hyperlink-color: #5200ff;
-  --hyperlink-alternate-color: orangered;
+  --hyperlink-alternate-color: D9F855;
   --hover-color: #111;
   --visited-color: #5200ff;
   --project-title-color: #5200ff;
-  --project-sidebar-background-color: orangered;
+  --project-sidebar-background-color: D9F855;
   --project-sidebar-text-color: white;
-  --heart-color: darkred;
+  --heart-color: #d9f855;
   --holding-page-footer-color: #f8f8ff;
   --text-selection-background-color: #5200ff;
-  --linear-gradient-color-1: #ff057c;
-  --linear-gradient-color-2: #8d0b93;
-  --linear-gradient-color-3: #321575;
+  --linear-gradient-color-1: #d3dde7;
+  --linear-gradient-color-2: #96a8fe;
+  --linear-gradient-color-3: #17194c;
   --stroke-shadow-color: rgba(0, 0, 0, 0.4);
 }
 
