@@ -92,19 +92,19 @@ html {
   --h4-color: #000000;
   --h5-color: #000000;
   --h6-color: #000000;
-  --primary-text-color: #222;
+  --primary-text-color: #000000;
   --holding-page-title-color: #ffffff;
   --accent-color: #d9f855;
   --overlay-color: #000000;
   --overlay-title-color: #ffffff;
   --overlay-description-color: #ffffff;
   --hyperlink-color: #17194c;
-  --hyperlink-alternate-color: D9F855;
+  --hyperlink-alternate-color: #96a8fe;
   --hover-color: #111;
   --visited-color: #17194c;
-  --project-title-color: #17194c;
-  --project-sidebar-background-color: D9F855;
-  --project-sidebar-text-color: white;
+  --project-title-color: #000000;
+  --project-sidebar-background-color: #ffffff;
+  --project-sidebar-text-color: #000000;
   --heart-color: #96a8fe;
   --holding-page-footer-color: #f8f8ff;
   --text-selection-background-color: #17194c;
@@ -473,7 +473,7 @@ a:active {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 3rem;
-  min-height: 100vh;
+  min-height: 20vh;
   background: var(--background-color-footer);
   padding: 1rem;
 }
@@ -556,11 +556,6 @@ a:active {
   justify-content: center;
 }
 
-.large-emoji-placeholder {
-  font-size: 12rem;
-  /* TODO: Delete this rule. It is only used for making the placeholder emojis large for demo purposes only. */
-}
-
 .text-section {
   width: 100%;
 }
@@ -576,13 +571,6 @@ a:active {
 .project-details {
   width: 100%;
   padding: 1rem;
-  /* TODO: Delete background-image and the three linear gradient colors to remove the gradient background on the project page. Be careful not to delete the closing } */
-  background-image: linear-gradient(
-    -225deg,
-    var(--linear-gradient-color-1) 0%,
-    var(--linear-gradient-color-2) 50%,
-    var(--linear-gradient-color-3) 100%
-  );
 }
 
 /* 
@@ -871,6 +859,6 @@ a:active {
   /* TODO: Add styles here for XX-large devices. */
 
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
   }
 }
