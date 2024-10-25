@@ -360,7 +360,7 @@ a:active {
   padding: 1rem;
 }
 
-/* Work Page Layout
+/* Home Page Layout
 
 ██     ██  ██████  ██████  ██   ██     ██████   █████   ██████  ███████ 
 ██     ██ ██    ██ ██   ██ ██  ██      ██   ██ ██   ██ ██       ██      
@@ -380,7 +380,7 @@ a:active {
   padding: 0.25rem;
 }
 
-/* Defining the work page grid */
+/* Defining the Home Page grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
