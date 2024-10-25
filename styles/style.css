@@ -328,7 +328,7 @@ a:active {
 }
 
 .logo {
-  width: 10rem;
+  width: 5rem;
   /* TODO: Adjust the width of the logo on mobile devices here. */
 }
 
@@ -730,7 +730,7 @@ a:active {
   }
 
   .logo {
-    width: 10rem;
+    width: 5rem;
     /* TODO: Adjust the width of the logo on large devices here. */
   }
 
