@@ -323,7 +323,7 @@ a:active {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1.8rem;
   align-items: flex-start;
 }
 
