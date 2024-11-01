@@ -27,7 +27,6 @@ Imported stylesheets. Remove the ones you do not want to use.
 
 /* TODO: Delete any stylesheets that you do not want to use. */
 
-@import url("make-something-fly.css");
 @import url("animated-gradient.css");
 @import url("text-stroke.css");
 @import url("stroke-shadow.css");
@@ -53,7 +52,7 @@ No media query for `xs` since this is the default in Bootstrap
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  cursor: url("../assets/temp/up-cursor.png"), auto !important;
+  cursor: url("../assets/icons8-cursor.png"), auto !important;
   /* TODO: Change the url above to add a custom cursor. Delete the line above if you want to use the default browser cursor. */
 }
 
@@ -747,7 +746,7 @@ a:active {
 
   .about {
     padding: 4rem;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .global-footer {
