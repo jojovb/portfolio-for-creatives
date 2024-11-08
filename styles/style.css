@@ -28,8 +28,6 @@ Imported stylesheets. Remove the ones you do not want to use.
 /* TODO: Delete any stylesheets that you do not want to use. */
 
 @import url("animated-gradient.css");
-@import url("text-stroke.css");
-@import url("stroke-shadow.css");
 @import url("experiments.css");
 @import url("style-guide.css");
 @import url("scroll-to-top.css");
@@ -97,19 +95,17 @@ html {
   --overlay-color: #000000;
   --overlay-title-color: #ffffff;
   --overlay-description-color: #ffffff;
-  --hyperlink-color: #17194c;
+  --hyperlink-color: #000000;
   --hyperlink-alternate-color: #96a8fe;
-  --hover-color: #111;
+  --hover-color: #17194c;
   --visited-color: #17194c;
   --project-title-color: #000000;
   --project-sidebar-background-color: #ffffff;
   --project-sidebar-text-color: #000000;
   --heart-color: #96a8fe;
   --text-selection-background-color: #17194c;
-  --linear-gradient-color-1: #d3dde7;
+  --linear-gradient-color-1: #8fc5fb;
   --linear-gradient-color-2: #96a8fe;
-  --linear-gradient-color-3: #17194c;
-  --stroke-shadow-color: rgba(0, 0, 0, 0.4);
 }
 
 body {
@@ -177,13 +173,14 @@ h4 {
 }
 
 h5 {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
+  font-weight: bolder;
   margin-bottom: 1rem;
   color: var(--h5-color);
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 1rem;
   line-height: 1.5;
   color: var(--h6-color);
