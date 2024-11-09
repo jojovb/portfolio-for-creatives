@@ -28,7 +28,6 @@ Imported stylesheets. Remove the ones you do not want to use.
 /* TODO: Delete any stylesheets that you do not want to use. */
 
 @import url("animated-gradient.css");
-@import url("experiments.css");
 @import url("style-guide.css");
 @import url("scroll-to-top.css");
 
@@ -208,7 +207,7 @@ em {
   font-size: 3.725rem;
   font-family: var(--project-title-typeface);
   color: var(--project-title-color);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .overlay-title {
@@ -327,7 +326,7 @@ a:active {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1.8rem;
+  padding: 3rem;
   align-items: flex-start;
 }
 
@@ -437,7 +436,7 @@ a:active {
 .about {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 3rem;
+  grid-gap: 6rem;
   background: var(--background-color-about);
   padding: 1rem;
   flex: 1;
