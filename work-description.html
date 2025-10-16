@@ -31,49 +31,42 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./styles/style.css" />
-    <script src="./responsive-nav/responsive-nav.min.js"></script>
-    <link rel="stylesheet" href="styles/responsive-nav.css" />
   </head>
 
   <body class="work-page" id="top">
-    <ul class="responsive-nav">
-      <li class="nav-branding-logo">
-        <a href="index.html">
-          <img
-            src="assets/branding-images/logo.svg"
-            alt="Your portfolio logo"
-          />
-        </a>
-      </li>
-      <li>
-        <nav class="nav-collapse">
-          <ul>
-            <li><a href="work.html">Work</a></li>
-            <li><a href="work.html">Play</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
-        </nav>
-      </li>
-    </ul>
-    <section class="hero gradient-animation">
+    <section class="hero">
       <header class="hero-header">
-        <ul class="nav-collapse">
-          <li>
-            <a href="work.html" class="nav-link-primary">Work</a>
+        <ul class="nav-branding">
+          <li><a href="work.html" class="custom-navigation">Work</a></li>
+          <li class="nav-branding-logo">
+            <a href="index.html"
+              ><img
+                src="assets/branding-images/logo.svg"
+                alt="Describe your project"
+            /></a>
           </li>
-          <li>
-            <a href="about.html" class="nav-link-primary">About</a>
-          </li>
+          <li><a href="about.html" class="custom-navigation">About</a></li>
         </ul>
       </header>
       <div class="hero-headline-wrapper">
-        <h1 class="stroke-shadow">
-          Hello, I'm a
-          <span class="highlight-primary">free portfolio template</span> for
-          graphic designers, illustrators, interactive designers, and other
-          creatives to showcase their work!
+        <h1 class="hero-headline">
+          This new layout features
+          <span class="highlight-primary"><strong>project titles</strong></span>
+          displayed
+          <span class="highlight-primary"><strong>below</strong></span> the
+          images — each one sits in a bold color block you can customize.
         </h1>
       </div>
+      <footer class="hero-footer">
+        <ul class="hero-footer-navigation">
+          <li><a href="#" class="custom-navigation">Instagram</a></li>
+          <li>
+            <a href="mailto:james@magnetude.com" class="custom-navigation"
+              >Email</a
+            >
+          </li>
+        </ul>
+      </footer>
     </section>
 
     <main class="main-work-section">
@@ -206,6 +199,7 @@
         </ul>
       </section>
     </main>
+
     <ul class="footer-global">
       <li class="footer-tagline">
         <h2>Let's Connect!</h2>
@@ -255,9 +249,7 @@
       </li>
     </ul>
 
-    <div id="myID" class="bottomMenu hide">
-      <a href="#">Back to top</a>
-    </div>
+    <div id="myID" class="bottomMenu hide"><a href="#">Back to top</a></div>
 
     <script>
       myID = document.getElementById("myID");
@@ -272,23 +264,6 @@
       };
 
       window.addEventListener("scroll", myScrollFunc);
-    </script>
-    <script>
-      var navigation = responsiveNav(".nav-collapse", {
-        animate: true, // Boolean: Use CSS3 transitions, true or false
-        transition: 284, // Integer: Speed of the transition, in milliseconds
-        label: "Menu", // String: Label for the navigation toggle
-        insert: "after", // String: Insert the toggle before or after the navigation
-        customToggle: "", // Selector: Specify the ID of a custom toggle
-        closeOnNavClick: false, // Boolean: Close the navigation when one of the links are clicked
-        openPos: "relative", // String: Position of the opened nav, relative or static
-        navClass: "nav-collapse", // String: Default CSS class. If changed, you need to edit the CSS too!
-        navActiveClass: "js-nav-active", // String: Class that is added to <html> element when nav is active
-        jsClass: "js", // String: 'JS enabled' class which is added to <html> element
-        init: function () {}, // Function: Init callback
-        open: function () {}, // Function: Open callback
-        close: function () {}, // Function: Close callback
-      });
     </script>
   </body>
 </html>
