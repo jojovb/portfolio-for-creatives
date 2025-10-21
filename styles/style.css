@@ -32,8 +32,8 @@
 /* TODO: Replace these Google Fonts with the ones you want to use on your site. */
 /* Remember, the more fonts you load, the longer it can take for your page to load. */
 
-/* Eczar Font (for headers or special text) */
-@import url("https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap");
+/* Grenze Font (for headers or special text) */
+@import url("https://fonts.googleapis.com/css2?family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* Rubik Font (clean and modern for body text) */
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap");
@@ -64,17 +64,8 @@
 /* File for animation effects that make elements blink */
 @import url("make-something-blink.css");
 
-/* File for adding a smooth animated gradient background */
-@import url("animated-gradient.css");
-
 /* File for adding a glitch animation to your 404 error page */
 @import url("error.css");
-
-/* File for adding text stroke (outline) effect */
-@import url("text-stroke.css");
-
-/* File for adding stroke shadow effect around text */
-@import url("stroke-shadow.css");
 
 /* File with extra experimental styles (e.g., fun animations or effects) */
 @import url("experiments.css");
@@ -103,8 +94,8 @@
 :root {
   /* Typography */
   --font-family-body: "Inter", sans-serif;
-  --font-family-heading: "Eczar", serif;
-  --font-family-project-title: "Eczar", serif;
+  --font-family-heading: "Grenze", serif;
+  --font-family-project-title: "Grenze", serif;
   /* Core Colours */
   --color-text-primary: #222;
   --color-text-secondary: #333;
