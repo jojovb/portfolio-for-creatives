@@ -13,7 +13,6 @@
   "use strict";
 
   var responsiveNav = function (el, options) {
-
     //= polyfills.js
     //= helpers.js
 
@@ -27,65 +26,66 @@
       navOpen;
 
     var ResponsiveNav = function (el, options) {
-        var i;
+      var i;
 
-        /**
-         * Default options
-         * @type {Object}
-         */
-        this.options = {
-          animate: true,                    // Boolean: Use CSS3 transitions, true or false
-          transition: 284,                  // Integer: Speed of the transition, in milliseconds
-          label: "Menu",                    // String: Label for the navigation toggle
-          insert: "before",                 // String: Insert the toggle before or after the navigation
-          customToggle: "",                 // Selector: Specify the ID of a custom toggle
-          closeOnNavClick: false,           // Boolean: Close the navigation when one of the links are clicked
-          openPos: "relative",              // String: Position of the opened nav, relative or static
-          navClass: "nav-collapse",         // String: Default CSS class. If changed, you need to edit the CSS too!
-          navActiveClass: "js-nav-active",  // String: Class that is added to <html> element when nav is active
-          jsClass: "js",                    // String: 'JS enabled' class which is added to <html> element
-          init: function(){},               // Function: Init callback
-          open: function(){},               // Function: Open callback
-          close: function(){}               // Function: Close callback
-        };
-
-        // User defined options
-        for (i in options) {
-          this.options[i] = options[i];
-        }
-
-        // Adds "js" class for <html>
-        addClass(htmlEl, this.options.jsClass);
-
-        // Wrapper
-        this.wrapperEl = el.replace("#", "");
-
-        // Try selecting ID first
-        if (document.getElementById(this.wrapperEl)) {
-          this.wrapper = document.getElementById(this.wrapperEl);
-
-        // If element with an ID doesn't exist, use querySelector
-        } else if (document.querySelector(this.wrapperEl)) {
-          this.wrapper = document.querySelector(this.wrapperEl);
-
-        // If element doesn't exists, stop here.
-        } else {
-          throw new Error("The nav element you are trying to select doesn't exist");
-        }
-
-        // Inner wrapper
-        this.wrapper.inner = getChildren(this.wrapper);
-
-        // For minification
-        opts = this.options;
-        nav = this.wrapper;
-
-        // Init
-        this._init(this);
+      /**
+       * Default options
+       * @type {Object}
+       */
+      this.options = {
+        animate: true, // Boolean: Use CSS3 transitions, true or false
+        transition: 284, // Integer: Speed of the transition, in milliseconds
+        label: "Menu", // String: Label for the navigation toggle
+        insert: "before", // String: Insert the toggle before or after the navigation
+        customToggle: "", // Selector: Specify the ID of a custom toggle
+        closeOnNavClick: false, // Boolean: Close the navigation when one of the links are clicked
+        openPos: "relative", // String: Position of the opened nav, relative or static
+        navClass: "nav-collapse", // String: Default CSS class. If changed, you need to edit the CSS too!
+        navActiveClass: "js-nav-active", // String: Class that is added to <html> element when nav is active
+        jsClass: "js", // String: 'JS enabled' class which is added to <html> element
+        init: function () {}, // Function: Init callback
+        open: function () {}, // Function: Open callback
+        close: function () {}, // Function: Close callback
       };
 
-    ResponsiveNav.prototype = {
+      // User defined options
+      for (i in options) {
+        this.options[i] = options[i];
+      }
 
+      // Adds "js" class for <html>
+      addClass(htmlEl, this.options.jsClass);
+
+      // Wrapper
+      this.wrapperEl = el.replace("#", "");
+
+      // Try selecting ID first
+      if (document.getElementById(this.wrapperEl)) {
+        this.wrapper = document.getElementById(this.wrapperEl);
+
+        // If element with an ID doesn't exist, use querySelector
+      } else if (document.querySelector(this.wrapperEl)) {
+        this.wrapper = document.querySelector(this.wrapperEl);
+
+        // If element doesn't exists, stop here.
+      } else {
+        throw new Error(
+          "The nav element you are trying to select doesn't exist"
+        );
+      }
+
+      // Inner wrapper
+      this.wrapper.inner = getChildren(this.wrapper);
+
+      // For minification
+      opts = this.options;
+      nav = this.wrapper;
+
+      // Init
+      this._init(this);
+    };
+
+    ResponsiveNav.prototype = {
       /**
        * Unattaches events and removes any classes that were added
        */
@@ -138,7 +138,7 @@
           addClass(htmlEl, opts.navActiveClass);
           addClass(navToggle, "active");
           nav.style.position = opts.openPos;
-          setAttributes(nav, {"aria-hidden": "false"});
+          setAttributes(nav, { "aria-hidden": "false" });
           navOpen = true;
           opts.open();
         }
@@ -153,7 +153,7 @@
           removeClass(nav, "opened");
           removeClass(htmlEl, opts.navActiveClass);
           removeClass(navToggle, "active");
-          setAttributes(nav, {"aria-hidden": "true"});
+          setAttributes(nav, { "aria-hidden": "true" });
 
           // If animations are enabled, wait until they finish
           if (opts.animate) {
@@ -163,7 +163,7 @@
               hasAnimFinished = true;
             }, opts.transition + 10);
 
-          // Animations aren't enabled, we can do these immediately
+            // Animations aren't enabled, we can do these immediately
           } else {
             nav.style.position = "absolute";
           }
@@ -178,26 +178,27 @@
        * It initializes the CSS styles and height calculations.
        */
       resize: function () {
-
         // Resize watches navigation toggle's display state
-        if (window.getComputedStyle(navToggle, null).getPropertyValue("display") !== "none") {
-
+        if (
+          window
+            .getComputedStyle(navToggle, null)
+            .getPropertyValue("display") !== "none"
+        ) {
           isMobile = true;
-          setAttributes(navToggle, {"aria-hidden": "false"});
+          setAttributes(navToggle, { "aria-hidden": "false" });
 
           // If the navigation is hidden
           if (nav.className.match(/(^|\s)closed(\s|$)/)) {
-            setAttributes(nav, {"aria-hidden": "true"});
+            setAttributes(nav, { "aria-hidden": "true" });
             nav.style.position = "absolute";
           }
 
           this._createStyles();
           this._calcHeight();
         } else {
-
           isMobile = false;
-          setAttributes(navToggle, {"aria-hidden": "true"});
-          setAttributes(nav, {"aria-hidden": "false"});
+          setAttributes(navToggle, { "aria-hidden": "true" });
+          setAttributes(nav, { "aria-hidden": "false" });
           nav.style.position = opts.openPos;
           this._removeStyles();
         }
@@ -213,26 +214,26 @@
         var evt = e || window.event;
 
         switch (evt.type) {
-        case "touchstart":
-          this._onTouchStart(evt);
-          break;
-        case "touchmove":
-          this._onTouchMove(evt);
-          break;
-        case "touchend":
-        case "mouseup":
-          this._onTouchEnd(evt);
-          break;
-        case "click":
-          this._preventDefault(evt);
-          break;
-        case "keyup":
-          this._onKeyUp(evt);
-          break;
-        case "focus":
-        case "resize":
-          this.resize(evt);
-          break;
+          case "touchstart":
+            this._onTouchStart(evt);
+            break;
+          case "touchmove":
+            this._onTouchMove(evt);
+            break;
+          case "touchend":
+          case "mouseup":
+            this._onTouchEnd(evt);
+            break;
+          case "click":
+            this._preventDefault(evt);
+            break;
+          case "keyup":
+            this._onKeyUp(evt);
+            break;
+          case "focus":
+          case "resize":
+            this.resize(evt);
+            break;
         }
       },
 
@@ -301,14 +302,13 @@
        * Creates Navigation Toggle
        */
       _createToggle: function () {
-
         // If there's no toggle, let's create one
         if (!opts.customToggle) {
           var toggle = document.createElement("a");
           toggle.innerHTML = opts.label;
           setAttributes(toggle, {
-            "href": "#",
-            "class": "nav-toggle"
+            href: "#",
+            class: "nav-toggle",
           });
 
           // Determine where to insert the toggle
@@ -320,7 +320,7 @@
 
           navToggle = toggle;
 
-        // There is a toggle already, let's use that one
+          // There is a toggle already, let's use that one
         } else {
           var toggleEl = opts.customToggle.replace("#", "");
 
@@ -329,7 +329,9 @@
           } else if (document.querySelector(toggleEl)) {
             navToggle = document.querySelector(toggleEl);
           } else {
-            throw new Error("The custom nav toggle you are trying to select doesn't exist");
+            throw new Error(
+              "The custom nav toggle you are trying to select doesn't exist"
+            );
           }
         }
       },
@@ -342,11 +344,16 @@
           var links = nav.getElementsByTagName("a"),
             self = this;
           forEach(links, function (i, el) {
-            addEvent(links[i], "click", function () {
-              if (isMobile) {
-                self.toggle();
-              }
-            }, false);
+            addEvent(
+              links[i],
+              "click",
+              function () {
+                if (isMobile) {
+                  self.toggle();
+                }
+              },
+              false
+            );
           });
         }
       },
@@ -356,7 +363,7 @@
        *
        * @param  {event} event
        */
-      _preventDefault: function(e) {
+      _preventDefault: function (e) {
         if (e.preventDefault) {
           if (e.stopImmediatePropagation) {
             e.stopImmediatePropagation();
@@ -365,7 +372,7 @@
           e.stopPropagation();
           return false;
 
-        // This is strictly for old IE
+          // This is strictly for old IE
         } else {
           e.returnValue = false;
         }
@@ -397,8 +404,10 @@
        * @param  {event} event
        */
       _onTouchMove: function (e) {
-        if (Math.abs(e.touches[0].clientX - this.startX) > 10 ||
-        Math.abs(e.touches[0].clientY - this.startY) > 10) {
+        if (
+          Math.abs(e.touches[0].clientX - this.startX) > 10 ||
+          Math.abs(e.touches[0].clientY - this.startY) > 10
+        ) {
           this.touchHasMoved = true;
         }
       },
@@ -416,13 +425,12 @@
 
         // If the user isn't scrolling
         if (!this.touchHasMoved) {
-
           // If the event type is touch
           if (e.type === "touchend") {
             this.toggle();
             return;
 
-          // Event type was click, not touch
+            // Event type was click, not touch
           } else {
             var evt = e || window.event;
 
@@ -456,9 +464,10 @@
             transition = "max-height " + opts.transition + "ms";
 
           objStyle.WebkitTransition =
-          objStyle.MozTransition =
-          objStyle.OTransition =
-          objStyle.transition = transition;
+            objStyle.MozTransition =
+            objStyle.OTransition =
+            objStyle.transition =
+              transition;
         }
       },
 
@@ -472,7 +481,22 @@
           savedHeight += nav.inner[i].offsetHeight;
         }
 
-        var innerStyles = "." + opts.jsClass + " ." + opts.navClass + "-" + this.index + ".opened{max-height:" + savedHeight + "px !important} ." + opts.jsClass + " ." + opts.navClass + "-" + this.index + ".opened.dropdown-active {max-height:9999px !important}";
+        var innerStyles =
+          "." +
+          opts.jsClass +
+          " ." +
+          opts.navClass +
+          "-" +
+          this.index +
+          ".opened{max-height:" +
+          savedHeight +
+          "px !important} ." +
+          opts.jsClass +
+          " ." +
+          opts.navClass +
+          "-" +
+          this.index +
+          ".opened.dropdown-active {max-height:9999px !important}";
 
         if (styleElement.styleSheet) {
           styleElement.styleSheet.cssText = innerStyles;
@@ -481,15 +505,13 @@
         }
 
         innerStyles = "";
-      }
-
+      },
     };
 
     /**
      * Return new Responsive Nav
      */
     return new ResponsiveNav(el, options);
-
   };
 
   if (typeof module !== "undefined" && module.exports) {
@@ -497,5 +519,4 @@
   } else {
     window.responsiveNav = responsiveNav;
   }
-
-}(document, window, 0));
+})(document, window, 0);

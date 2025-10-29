@@ -102,6 +102,7 @@
   --font-family-body: "Public Sans", sans-serif;
   --font-family-heading: "BIZ UDPMincho", serif;
   --font-family-project-title: "Public Sans", sans-serif;
+  --font-family-special: "Syne Tactile", system-ui;
   /* Core Colours */
   --color-text-primary: #020a03;
   --color-text-secondary: #fff;
@@ -142,12 +143,12 @@
   /* Components */
   --color-bg-full-width: #ffffff;
   --color-bg-project-description: #ffffff;
-  --color-gradient-hero: linear-gradient(90deg, #ff00ff, #00ffff);
-  --color-gradient-project-details: linear-gradient(
-    -225deg,
-    #ff057c 0%,
-    #8d0b93 50%,
-    #321575 100%
+  --color-gradient-hero: linear-gradient(
+    90deg,
+    #090007,
+    #00452d,
+    #7f8e58,
+    #fff2ce
   );
   /* Special Elements */
   --color-icon-heart: #ffffff;
@@ -1473,12 +1474,6 @@ to keep your styles reusable and consistent.
     grid-row: 1 / 2;
   }
 
-  /* Column 2: Awards & Works */
-  .footer-highlights {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-  }
-
   /* Column 3: Contact & Social */
   .footer-contact-social {
     grid-row: 1 / 2;
@@ -1518,7 +1513,7 @@ to keep your styles reusable and consistent.
   /* TODO: Add styles here for X-large devices. */
 
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   }
 }
 
@@ -1528,7 +1523,7 @@ to keep your styles reusable and consistent.
   /* TODO: Add styles here for XX-large devices. */
 
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   }
 }
 

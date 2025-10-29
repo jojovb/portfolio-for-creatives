@@ -1,14 +1,14 @@
 /*global describe: false, it: false */
 /* exported ResponsiveNav */
 describe("responsive-nav", function () {
-
   var nav,
     selector = "navigation",
     el = document.createElement("div");
 
   el.className = "nav-collapse";
   el.id = selector;
-  el.innerHTML = "<ul style='overflow:hidden;width:100%;height:16px;float:left;margin:0;padding:0'>" +
+  el.innerHTML =
+    "<ul style='overflow:hidden;width:100%;height:16px;float:left;margin:0;padding:0'>" +
     "<li style='height:4px;overflow:hidden;width:100%;float:left;margin:0;padding:0'><a href='#'>Home</a></li>" +
     "<li style='height:4px;overflow:hidden;width:100%;float:left;margin:0;padding:0'><a href='#'>About</a></li>" +
     "<li style='height:4px;overflow:hidden;width:100%;float:left;margin:0;padding:0'><a href='#'>Projects</a></li>" +
@@ -34,9 +34,9 @@ describe("responsive-nav", function () {
    * Resize
    */
   describe("resize", function () {
-
     it("calculates the height of the navigation", function () {
-      el.innerHTML = "<ul style='overflow:hidden;width:100%;float:left;margin:0;padding:0'>" +
+      el.innerHTML =
+        "<ul style='overflow:hidden;width:100%;float:left;margin:0;padding:0'>" +
         "<li style='height:4px;overflow:hidden;width:100%;float:left;margin:0;padding:0'><a href='#'>Home</a></li>" +
         "<li style='height:4px;overflow:hidden;width:100%;float:left;margin:0;padding:0'><a href='#'>About</a></li>" +
         "<li style='height:4px;overflow:hidden;width:100%;float:left;margin:0;padding:0'><a href='#'>Projects</a></li>" +
@@ -44,18 +44,20 @@ describe("responsive-nav", function () {
         "</ul>";
       insertNav();
       var styleEl = document.getElementsByTagName("style")[0],
-        styleContents = styleEl.innerHTML || styleEl.styleSheet.cssText.replace(/\s+/g, "").replace(/\;/g, "");
-      expect(styleContents.replace(/\.opened/g, "")).toBe(".js .nav-collapse-0{max-height:16px !important} .js .nav-collapse-0.dropdown-active {max-height:9999px !important}");
+        styleContents =
+          styleEl.innerHTML ||
+          styleEl.styleSheet.cssText.replace(/\s+/g, "").replace(/\;/g, "");
+      expect(styleContents.replace(/\.opened/g, "")).toBe(
+        ".js .nav-collapse-0{max-height:16px !important} .js .nav-collapse-0.dropdown-active {max-height:9999px !important}"
+      );
       nav.destroy();
     });
-
   });
 
   /**
    * Init
    */
   describe("init", function () {
-
     it("adds a 'js' class", function () {
       insertNav();
       expect(document.documentElement.className).toBe("js");
@@ -72,7 +74,9 @@ describe("responsive-nav", function () {
 
     it("creates a toggle", function () {
       insertNav();
-      expect(document.querySelector(".nav-toggle").nodeName.toLowerCase()).toBe("a");
+      expect(document.querySelector(".nav-toggle").nodeName.toLowerCase()).toBe(
+        "a"
+      );
       expect(el.className).toBe("nav-collapse nav-collapse-3 closed");
       nav.destroy();
     });
@@ -100,7 +104,8 @@ describe("responsive-nav", function () {
     });
 
     it("should work with multiple menus", function () {
-      el.innerHTML = "<ul style='display:block;width:100%;float:left;margin:0;padding:0'>" +
+      el.innerHTML =
+        "<ul style='display:block;width:100%;float:left;margin:0;padding:0'>" +
         "<li style='display:block;height:10px;overflow:hidden;width:100%;float:left;margin:0;padding:0'><a href='#'>Home</a></li>" +
         "<li style='display:block;height:10px;overflow:hidden;width:100%;float:left;margin:0;padding:0'><a href='#'>About</a></li>" +
         "</ul>" +
@@ -111,8 +116,12 @@ describe("responsive-nav", function () {
         "</ul>";
       insertNav();
       var styleEl = document.getElementsByTagName("style")[0],
-        styleContents = styleEl.innerHTML || styleEl.styleSheet.cssText.replace(/\s+/g, "").replace(/\;/g, "");
-      expect(styleContents.replace(/\.opened/g, "")).toBe(".js .nav-collapse-7{max-height:50px !important} .js .nav-collapse-7.dropdown-active {max-height:9999px !important}");
+        styleContents =
+          styleEl.innerHTML ||
+          styleEl.styleSheet.cssText.replace(/\s+/g, "").replace(/\;/g, "");
+      expect(styleContents.replace(/\.opened/g, "")).toBe(
+        ".js .nav-collapse-7{max-height:50px !important} .js .nav-collapse-7.dropdown-active {max-height:9999px !important}"
+      );
       nav.destroy();
     });
 
@@ -120,7 +129,8 @@ describe("responsive-nav", function () {
       var el2 = document.createElement("div");
       el2.className = "nav-collapse";
       el2.id = "navigation2";
-      el2.innerHTML = "<ul style='overflow:hidden;width:100%;height:16px;float:left;margin:0;padding:0'>" +
+      el2.innerHTML =
+        "<ul style='overflow:hidden;width:100%;height:16px;float:left;margin:0;padding:0'>" +
         "<li style='height:4px;overflow:hidden;width:100%;float:left;margin:0;padding:0'><a href='#'>Home</a></li>" +
         "<li style='height:4px;overflow:hidden;width:100%;float:left;margin:0;padding:0'><a href='#'>About</a></li>" +
         "<li style='height:4px;overflow:hidden;width:100%;float:left;margin:0;padding:0'><a href='#'>Projects</a></li>" +
@@ -135,14 +145,12 @@ describe("responsive-nav", function () {
       nav.destroy();
       nav2.destroy();
     });
-
   });
 
   /**
    * destroy
    */
   describe("destroy", function () {
-
     it("destroys Responsive Nav", function () {
       insertNav();
       nav.destroy();
@@ -155,14 +163,12 @@ describe("responsive-nav", function () {
       expect(el.getAttribute("aria-hidden")).not.toBe("true");
       expect(el.getAttribute("aria-hidden")).not.toBe("false");
     });
-
   });
 
   /**
    * toggle
    */
   describe("toggle", function () {
-
     it("toggles the navigation open and close", function () {
       insertNav();
       spyOn(nav, "toggle").andCallThrough();
@@ -175,14 +181,12 @@ describe("responsive-nav", function () {
       expect(navToggle.className).toBe("nav-toggle active");
       nav.destroy();
     });
-
   });
 
   /**
    * open
    */
   describe("open", function () {
-
     it("opens the navigation", function () {
       insertNav();
       spyOn(nav, "open").andCallThrough();
@@ -193,14 +197,12 @@ describe("responsive-nav", function () {
       expect(el.style.position).toBe("relative");
       nav.destroy();
     });
-
   });
 
   /**
    * close
    */
   describe("close", function () {
-
     it("closes the navigation", function () {
       insertNav();
       spyOn(nav, "close").andCallThrough();
@@ -211,14 +213,12 @@ describe("responsive-nav", function () {
       expect(el.getAttribute("aria-hidden")).toBe("true");
       nav.destroy();
     });
-
   });
 
   /**
    * handleEvent
    */
   describe("handleEvent", function () {
-
     it("toggles the navigation on touchend", function () {
       insertNav();
       var toggle = document.querySelector(".nav-toggle");
@@ -234,14 +234,12 @@ describe("responsive-nav", function () {
       expect(el.className).toBe("nav-collapse nav-collapse-15 opened");
       nav.destroy();
     });
-
   });
 
   /**
    * options
    */
   describe("options", function () {
-
     it("turns off animation if needed", function () {
       document.getElementsByTagName("body")[0].appendChild(el);
       nav = responsiveNav("#" + selector, { animate: false });
@@ -280,7 +278,9 @@ describe("responsive-nav", function () {
       button.id = "button";
       document.getElementsByTagName("body")[0].appendChild(button);
       nav = responsiveNav("#" + selector, { customToggle: "button" });
-      expect(document.getElementById("button").getAttribute("aria-hidden")).toBeDefined();
+      expect(
+        document.getElementById("button").getAttribute("aria-hidden")
+      ).toBeDefined();
       nav.destroy();
     });
 
@@ -310,7 +310,9 @@ describe("responsive-nav", function () {
       document.getElementsByTagName("body")[0].appendChild(el);
       var foo = "bar";
       nav = responsiveNav("#" + selector, {
-        init: function () { foo = "biz"; }
+        init: function () {
+          foo = "biz";
+        },
       });
       expect(foo).toBe("biz");
       nav.destroy();
@@ -320,7 +322,9 @@ describe("responsive-nav", function () {
       document.getElementsByTagName("body")[0].appendChild(el);
       var foo = "bar";
       nav = responsiveNav("#" + selector, {
-        open: function () { foo = "biz"; }
+        open: function () {
+          foo = "biz";
+        },
       });
       nav.toggle();
       expect(foo).toBe("biz");
@@ -331,14 +335,14 @@ describe("responsive-nav", function () {
       document.getElementsByTagName("body")[0].appendChild(el);
       var foo = "bar";
       nav = responsiveNav("#" + selector, {
-        close: function () { foo = "biz"; }
+        close: function () {
+          foo = "biz";
+        },
       });
       nav.toggle();
       nav.toggle();
       expect(foo).toBe("biz");
       nav.destroy();
     });
-
   });
-
 });
