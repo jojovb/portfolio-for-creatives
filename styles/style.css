@@ -103,48 +103,45 @@
   --font-family-heading: "BIZ UDPMincho", serif;
   --font-family-project-title: "Public Sans", sans-serif;
   /* Core Colours */
-  --color-text-primary: #222;
-  --color-text-secondary: #333;
-  --color-accent-primary: #5200ff;
-  --color-accent-secondary: #ff057c;
-  --color-overlay-primary: rgba(82, 0, 255, 0.5);
-  --color-highlight: lemonchiffon;
-  --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
+  --color-text-primary: #020a03;
+  --color-text-secondary: #fff;
+  --color-accent-primary: #fff;
+  --color-accent-secondary: #336a40;
+  --color-overlay-primary: #00452d;
+  --color-highlight: #ffd258;
+  --color-fallback: #336a40; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
-  --color-bg: #fdfdfd;
-  --color-bg-about: #f5f5f5;
-  --color-bg-footer: #f5f5f5;
-  --color-bg-holding-page: rgba(82, 0, 255, 0.6);
+  --color-bg: #ffffff;
+  --color-bg-about: #ffffff;
+  --color-bg-footer: #020a03;
   /* Headings */
-  --h1-color: #5200ff;
-  --h2-color: #5200ff;
-  --h3-color: #5200ff;
-  --h4-color: #5200ff;
-  --h5-color: #5200ff;
-  --h6-color: #5200ff;
+  --h1-color: #00452d;
+  --h2-color: #00452d;
+  --h3-color: #020a03;
+  --h4-color: #ffffff;
+  --h5-color: #ffffff;
+  --h6-color: #ffffff;
   /* Special Text Colours */
-  --color-text-holding-title: #ebedf0;
-  --color-text-project-category: #ffffff;
-  --color-text-project-description: #222;
-  --color-text-project-sidebar: #222;
-  --color-text-project-title: #5200ff;
-  --color-text-work-grid-title: #ffffff;
+  --color-text-holding-title: #020a03;
+  --color-text-project-category: #020a03;
+  --color-text-project-description: #020a03;
+  --color-text-project-sidebar: #020a03;
+  --color-text-project-title: #020a03;
+  --color-text-work-grid-title: #020a03f;
   /* Link States */
-  --color-link: #5200ff;
-  --color-link-hover: #111;
-  --color-link-visited: #5200ff;
+  --color-link: #020a03;
+  --color-link-hover: #336a40;
+  --color-link-visited: #00452d;
   /* Navigation */
-  --color-nav-link: #5200ff;
-  --color-nav-link-hover: #321575;
-  --color-nav-arrow: #5200ff;
+  --color-nav-link: #6a8a69;
+  --color-nav-link-hover: #6a8a69;
+  --color-nav-arrow: #6a8a69;
   --color-nav-arrow-hover: #000;
-  --color-nav-arrow-stroke: #5200ff;
+  --color-nav-arrow-stroke: #6a8a69;
   --color-nav-arrow-stroke-hover: #000;
   /* Components */
-  --color-bg-full-width: #f5f5f5;
-  --color-bg-project-description: #f5f5f5;
-  --color-bg-sidebar-project: orangered;
-  --color-bg-sidebar-work: lemonchiffon;
+  --color-bg-full-width: #ffffff;
+  --color-bg-project-description: #ffffff;
   --color-gradient-hero: linear-gradient(90deg, #ff00ff, #00ffff);
   --color-gradient-project-details: linear-gradient(
     -225deg,
@@ -153,9 +150,9 @@
     #321575 100%
   );
   /* Special Elements */
-  --color-icon-heart: darkred;
-  --color-text-holding-footer: #f8f8ff;
-  --color-bg-selection: #5200ff;
+  --color-icon-heart: #ffffff;
+  --color-text-holding-footer: #ffffff;
+  --color-bg-selection: #6a8a69;
   --color-shadow-stroke: rgba(0, 0, 0, 0.4);
   /* Assets */
   --image-noise-texture: url(/assets/temp/noise.svg);
@@ -178,7 +175,7 @@
   /* Flex Gap Scale */
   --gap-tiny: 0.5rem; /* Micro-gap: icon spacing, small button groups */
   --gap-small: 1rem; /* Compact gap: card elements, form fields */
-  --gap-medium: 2rem; /* Standard gap: desktop card grids, section items */
+  --gap-medium: 1rem; /* Standard gap: desktop card grids, section items */
   --gap-large: 3rem; /* Section gap: major content blocks, banner spacing */
   --gap-jumbo: 4rem; /* Hero gap: full-width containers, large card spacing */
   --gap-ultra: 8rem; /* Edge-to-edge spacing: mega sections, spacious layouts */
@@ -426,8 +423,8 @@ svg {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background: lightblue;
   padding: var(--padding-small);
+  align-items: flex-start;
 }
 
 /* ------------------------------------------------------------------ */
@@ -564,12 +561,14 @@ sup {
 
 /* 📂 Project grid title — used in grid view (like a portfolio gallery) */
 .work-grid-project-title {
-  font-size: 2.875rem;
+  font-family: var(--font-family-project-title);
+  font-size: 2rem;
   color: var(--color-text-work-grid-title);
 }
 
 /* 🏷️ Project category label — displays the type or role of the project */
 .work-grid-project-category {
+  font-size: 1.5rem;
   color: var(--color-text-project-category);
 }
 
@@ -689,10 +688,10 @@ a.nav-link-primary:hover {
 
 .nav-branding {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   padding: var(--padding-small);
-  align-items: center;
+  align-items: flex-start;
 }
 
 .nav-branding-group {
@@ -897,33 +896,6 @@ a.nav-link-primary:hover {
   /* Placeholder: no custom styles yet */
 }
 
-/*
-
-███████ ██ ██████  ███████ ██████   █████  ██████  
-██      ██ ██   ██ ██      ██   ██ ██   ██ ██   ██ 
-███████ ██ ██   ██ █████   ██████  ███████ ██████  
-     ██ ██ ██   ██ ██      ██   ██ ██   ██ ██   ██ 
-███████ ██ ██████  ███████ ██████  ██   ██ ██   ██ 
-                                                   
-                                                   
-*/
-
-/* -------------------------------------------------------------------------- */
-/* 🗂️ Sidebar Navigation Styles                                                 */
-/* This section contains styles for the sidebar navigation on the portfolio    */
-/* website. The aim is to create a simple and clean sidebar for better access. */
-/* -------------------------------------------------------------------------- */
-
-/* Sidebar navigation list styles */
-.sidebar-nav-list {
-  padding: var(--padding-small); /* Adds padding around the navigation list */
-}
-
-/* Individual navigation item styles */
-.sidebar-nav-item {
-  margin-bottom: 1rem; /* Space between each navigation item */
-}
-
 /* 
 
  █████  ██████   ██████  ██    ██ ████████ 
@@ -997,10 +969,7 @@ a.nav-link-primary:hover {
   grid-column: 1 / 2; /* Full width (single column) */
   grid-row: 1 / 2;
 }
-.footer-highlights {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-}
+
 .footer-contact-social {
   grid-column: 1 / 2;
   grid-row: 3 / 4;
@@ -1070,7 +1039,7 @@ a.nav-link-primary:hover {
 
 .footer-fineprint {
   font-size: 0.875rem; /* Slightly smaller for disclaimers or captions */
-  color: var(--color-text-secondary); /* Themed color */
+  color: var(--color-text-holding-footer); /* Themed color */
 }
 
 /* New item badges */
@@ -1218,77 +1187,6 @@ a.nav-link-primary:hover {
 }
 
 /*
-
-██████  ██       ██████   ██████      ██ ██████  ███████ ███████ ██    ██ ███    ███ ███████ 
-██   ██ ██      ██    ██ ██          ██  ██   ██ ██      ██      ██    ██ ████  ████ ██      
-██████  ██      ██    ██ ██   ███   ██   ██████  █████   ███████ ██    ██ ██ ████ ██ █████   
-██   ██ ██      ██    ██ ██    ██  ██    ██   ██ ██           ██ ██    ██ ██  ██  ██ ██      
-██████  ███████  ██████   ██████  ██     ██   ██ ███████ ███████  ██████  ██      ██ ███████ 
-                                                                                             
-*/
-
-/* Blog and Resume page styles */
-
-.text-section {
-  width: 100%;
-  background: var(--color-bg);
-  padding: var(--padding-small);
-}
-.list-item {
-  line-height: 1.3;
-  list-style-type: disc;
-  margin-left: 1.2rem;
-}
-
-/* 
-
-██   ██  ██████  ██      ██████  ██ ███    ██  ██████  
-██   ██ ██    ██ ██      ██   ██ ██ ████   ██ ██       
-███████ ██    ██ ██      ██   ██ ██ ██ ██  ██ ██   ███ 
-██   ██ ██    ██ ██      ██   ██ ██ ██  ██ ██ ██    ██ 
-██   ██  ██████  ███████ ██████  ██ ██   ████  ██████  
-                                                       
-*/
-
-/* ----------------------------------------------------------------
-   Holding Page Styles
-   ----------------------------------------------------------------
-   Includes layout, typography, and visual effects for the demo
-   landing page (index.html).
-
-   Related files:
-     • CSS: styles/interactive-blobs.css
-     • JS:  js/interactive-blobs.js
----------------------------------------------------------------- */
-
-.holding-page-animation {
-  width: 10rem;
-  margin: 0 auto;
-  margin-bottom: 3rem;
-}
-
-.holding-page-title {
-  font-size: 1.5rem;
-  color: var(--color-text-holding-title);
-}
-
-.holding-page-footer {
-  display: grid;
-  place-items: center;
-  min-height: 10vh;
-  width: 100%;
-  padding: var(--padding-small);
-}
-
-.holding-page-copyright {
-  font-size: 0.8rem; /* Smaller font size for copyright text */
-  color: var(
-    --color-text-holding-footer
-  ); /* Custom color for the footer text */
-  margin-bottom: 0; /* Removes default margin from the bottom of the copyright text */
-}
-
-/*
 ███████ ██████  ██████   ██████  ██████  
 ██      ██   ██ ██   ██ ██    ██ ██   ██ 
 █████   ██████  ██████  ██    ██ ██████  
@@ -1340,23 +1238,6 @@ to keep your styles reusable and consistent.
 
 .play-page {
   /* Add page-specific layout or container styles here */
-}
-
-/*
-
-███████ ██   ██ ███████ ████████  ██████ ██   ██ ██████   ██████   ██████  ██   ██ 
-██      ██  ██  ██         ██    ██      ██   ██ ██   ██ ██    ██ ██    ██ ██  ██  
-███████ █████   █████      ██    ██      ███████ ██████  ██    ██ ██    ██ █████   
-     ██ ██  ██  ██         ██    ██      ██   ██ ██   ██ ██    ██ ██    ██ ██  ██  
-███████ ██   ██ ███████    ██     ██████ ██   ██ ██████   ██████   ██████  ██   ██ 
-
-*/
-
-/* Sketchbook Page Styles */
-
-.sketchbook-page {
-  display: grid;
-  place-items: center;
 }
 
 /*

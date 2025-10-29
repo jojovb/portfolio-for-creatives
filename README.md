@@ -69,7 +69,7 @@ These are great first steps to customize your portfolio visually without writing
 2. **Edit the colours in `style.css`**  
    Scroll through `style.css` and look for these lines:  
    `--color-text-primary: #222;`  
-   `--color-accent-primary: #5200ff;`  
+   `--color-accent-primary: #6a8a69;`  
    Change the hex codes to your preferred color palette.
 
 3. **Change the fonts**  
