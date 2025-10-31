@@ -117,20 +117,20 @@
   --color-bg-footer: #020a03;
   /* Headings */
   --h1-color: #00452d;
-  --h2-color: #00452d;
+  --h2-color: #fff;
   --h3-color: #020a03;
-  --h4-color: #ffffff;
-  --h5-color: #ffffff;
-  --h6-color: #ffffff;
+  --h4-color: #000;
+  --h5-color: #000;
+  --h6-color: #000;
   /* Special Text Colours */
   --color-text-holding-title: #020a03;
   --color-text-project-category: #020a03;
   --color-text-project-description: #020a03;
   --color-text-project-sidebar: #020a03;
   --color-text-project-title: #020a03;
-  --color-text-work-grid-title: #020a03f;
+  --color-text-work-grid-title: #020a03;
   /* Link States */
-  --color-link: #020a03;
+  --color-link: #336a40;
   --color-link-hover: #336a40;
   --color-link-visited: #00452d;
   /* Navigation */
@@ -143,13 +143,6 @@
   /* Components */
   --color-bg-full-width: #ffffff;
   --color-bg-project-description: #ffffff;
-  --color-gradient-hero: linear-gradient(
-    90deg,
-    #090007,
-    #00452d,
-    #7f8e58,
-    #fff2ce
-  );
   /* Special Elements */
   --color-icon-heart: #ffffff;
   --color-text-holding-footer: #ffffff;
@@ -219,7 +212,7 @@ html {
 body {
   font-family: var(--font-family-body);
   color: var(--color-text-primary);
-  background: var(--color-bg);
+  background: transparent;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -444,45 +437,55 @@ svg {
 /* Heading Styles (h1 - h6) */
 
 h1 {
-  font-size: 2rem;
+  font-size: 3.75rem;
   font-family: var(--font-family-heading);
-  line-height: 1.4;
+  font-weight: 400;
+  line-height: 4.25rem;
   margin-bottom: 1rem;
   color: var(--h1-color);
 }
 
 h2 {
-  font-size: 1.5rem;
-  font-family: var(--font-family-heading);
-  line-height: 1.2;
+  font-size: 4rem;
+  font-family: var(--font-family-special);
+  font-weight: 400;
+  line-height: normal;
   margin-bottom: 1rem;
   color: var(--h2-color);
 }
 
 h3 {
-  font-size: 1.325rem;
-  margin-bottom: 1rem;
-  line-height: 1.2;
+  font-size: 2.5rem;
+  font-family: var(--font-family-special);
+  font-weight: 400;
+  margin-bottom: normal;
+  line-height: 1rem;
   color: var(--h3-color);
 }
 
 h4 {
-  font-size: 1.2rem;
-  line-height: 1.2;
+  font-size: 2.625rem;
+  font-family: var(--font-family-project-title);
+  font-weight: 500;
+  line-height: normal;
   margin-bottom: 1rem;
   color: var(--h4-color);
 }
 
 h5 {
-  font-size: 1.1rem;
-  line-height: 1.2;
+  font-size: 2.125rem;
+  font-family: var(--font-family-body);
+  font-weight: 300;
+  line-height: normal;
   margin-bottom: 1rem;
   color: var(--h5-color);
 }
 
 h6 {
-  font-size: 1rem;
-  line-height: 1.2;
+  font-size: 1.75rem;
+  font-family: var(--font-family-body);
+  font-weight: 400;
+  line-height: normal;
   margin-bottom: 1rem;
   color: var(--h6-color);
 }
@@ -493,9 +496,12 @@ h6 {
 /* ------------------------------------------------------------------ */
 
 p {
-  font-size: 1rem;
-  line-height: 1.3;
+  font-size: 1.25rem;
+  font-family: var(--font-family-body);
+  font-weight: 300;
+  line-height: normal;
   margin-bottom: 1rem;
+  colour: #000;
 }
 
 strong {
@@ -551,13 +557,6 @@ sup {
 /* ✨ Highlighted text — great for emphasis */
 .highlight-primary {
   color: var(--color-accent-secondary);
-}
-
-.highlight-gradient {
-  background: var(--color-gradient-hero);
-  -webkit-background-clip: text;
-  color: transparent;
-  font-weight: bold;
 }
 
 /* 📂 Project grid title — used in grid view (like a portfolio gallery) */
@@ -681,7 +680,7 @@ a.nav-link-primary:hover {
   width: 100%;
   min-height: 80vh; /* Takes up most of the screen height */
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .hero-header {
   min-height: 6rem; /* Space reserved for logo + nav */
@@ -689,7 +688,7 @@ a.nav-link-primary:hover {
 
 .nav-branding {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   padding: var(--padding-small);
   align-items: flex-start;
@@ -704,7 +703,7 @@ a.nav-link-primary:hover {
 }
 
 .nav-branding-logo {
-  width: 3rem;
+  width: 5rem;
   /* TODO: Adjust the width of the logo on mobile devices here */
 }
 
@@ -716,7 +715,6 @@ a.nav-link-primary:hover {
   gap: 3rem;
   align-items: center;
   justify-content: center;
-  padding: var(--padding-small);
   text-align: left;
 }
 
@@ -1324,15 +1322,9 @@ to keep your styles reusable and consistent.
   }
 
   .hero {
-    min-height: 100vh;
+    min-height: 60vh;
   }
 
-  .hero-headline-wrapper {
-    padding-top: var(--padding-jumbo);
-    padding-bottom: var(--padding-jumbo);
-    padding-left: var(--padding-ultra);
-    padding-right: var(--padding-ultra);
-  }
   .error-headline-wrapper {
     padding-top: var(--padding-small);
     padding-bottom: var(--padding-small);
