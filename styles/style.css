@@ -116,7 +116,7 @@
   --color-bg-about: #ffffff;
   --color-bg-footer: #020a03;
   /* Headings */
-  --h1-color: #00452d;
+  --h1-color: #000;
   --h2-color: #fff;
   --h3-color: #020a03;
   --h4-color: #000;
@@ -437,19 +437,16 @@ svg {
 /* Heading Styles (h1 - h6) */
 
 h1 {
-  font-size: 3.75rem;
+  font-size: 2rem;
   font-family: var(--font-family-heading);
-  font-weight: 400;
-  line-height: 4.25rem;
-  margin-bottom: 1rem;
-  color: var(--h1-color);
+  font-weight: 100;
+  line-height: 2.75rem;
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: var(--font-family-special);
-  font-weight: 400;
-  line-height: normal;
+  line-height: 4rem;
   margin-bottom: 1rem;
   color: var(--h2-color);
 }
@@ -457,9 +454,8 @@ h2 {
 h3 {
   font-size: 2.5rem;
   font-family: var(--font-family-special);
-  font-weight: 400;
-  margin-bottom: normal;
-  line-height: 1rem;
+  line-height: 3rem;
+  margin-bottom: 1rem;
   color: var(--h3-color);
 }
 
@@ -501,7 +497,7 @@ p {
   font-weight: 300;
   line-height: normal;
   margin-bottom: 1rem;
-  colour: #000;
+  color: #000;
 }
 
 strong {
@@ -525,7 +521,7 @@ sup {
 
 /* Main hero headline — usually sits in the intro section */
 .hero-headline {
-  color: var(#fff); /* Uses your brand's dominant color */
+  color: #fff; /* Uses your brand's dominant color */
   max-width: 40ch; /* Optimal line length for readability (~40 characters) */
   text-wrap: balance; /* Prevents awkward line breaks (like elegant typography) */
   margin-inline: auto; /* Horizontally centers the text in its container */
@@ -682,6 +678,7 @@ a.nav-link-primary:hover {
   display: flex;
   flex-direction: row;
 }
+
 .hero-header {
   min-height: 6rem; /* Space reserved for logo + nav */
 }
@@ -707,19 +704,22 @@ a.nav-link-primary:hover {
   /* TODO: Adjust the width of the logo on mobile devices here */
 }
 
+.hero-section {
+  background-image: url("../assets/hero/grass.jpg");
+  min-height: 80vh;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
 .hero-headline-wrapper {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex: 1;
-  gap: 3rem;
   align-items: center;
   justify-content: center;
   text-align: left;
-}
-
-.hero-icon {
-  font-size: 4rem;
+  padding: var(--padding-medium);
 }
 
 /*
@@ -1260,12 +1260,10 @@ to keep your styles reusable and consistent.
   .width-two-thirds {
     width: 66.666%;
   }
-  .holding-page-title {
-    font-size: 2rem;
-  }
 
   h1 {
-    font-size: 4.275rem;
+    font-size: 3rem;
+    line-height: 4rem;
   }
 
   h2 {
@@ -1322,7 +1320,7 @@ to keep your styles reusable and consistent.
   }
 
   .hero {
-    min-height: 60vh;
+    min-height: 80vh;
   }
 
   .error-headline-wrapper {
