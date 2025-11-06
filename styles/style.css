@@ -70,9 +70,6 @@
 /* File for animation effects that make elements blink */
 @import url("make-something-blink.css");
 
-/* File for adding a glitch animation to your 404 error page */
-@import url("error.css");
-
 /* File with extra experimental styles (e.g., fun animations or effects) */
 @import url("experiments.css");
 

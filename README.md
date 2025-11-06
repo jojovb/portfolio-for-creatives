@@ -114,7 +114,7 @@ After making these changes, visit your live site to see the changes in action!
 | `project-full-width.html`     | Full-width project layout                      |
 | `about.html`                  | Two-column responsive About page               |
 | `components.html`             | Reusable UI components for quick editing       |
-| `404.html`                    | Custom 404 error page                          |
+| `error.html`                  | Custom 404 error page                          |
 
 ### ✨ Features at a Glance
 
