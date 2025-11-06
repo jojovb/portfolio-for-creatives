@@ -54,7 +54,7 @@ Get your portfolio up and running in seconds:
 
 1. Open `index.html` if you're using a splash page
 2. Or open `work.html` to go straight to your projects
-3. Begin customizing work/project-1.html to showcase your first real project!
+3. Begin customizing work/dripp-coffee-gear.html to showcase your first real project!
 
 🛠️ Want to make it your own? See the beginner-friendly edits below.
 
@@ -91,7 +91,7 @@ These are great first steps to customize your portfolio visually without writing
    👉 For a longer bio, open `about.html` and replace the demo text with your story.
 
 6. **Edit your project pages**  
-   Open `work/project-1.html`, `work/project-2.html`, or `project-3`.  
+   Open `work/dripp-coffee-gear.html`, `work/capstone.html`, or `project-3`.  
    Replace the placeholder title and description with your actual project details.
 
 After making these changes, visit your live site to see the changes in action!
@@ -100,21 +100,21 @@ After making these changes, visit your live site to see the changes in action!
 
 ### 🗂️ Included Page Templates
 
-| Page Name                 | Description                                    |
-| ------------------------- | ---------------------------------------------- |
-| `index.html`              | Holding page (optional intro/splash)           |
-| `work.html`               | Classic work grid layout                       |
-| `work-sidebar.html`       | Work grid with sticky sidebar navigation       |
-| `work-titles-below.html`  | Project titles below thumbnails                |
-| `work-clean.html`         | Clean version with no overlays                 |
-| `work-grayscale.html`     | Grayscale image filter variation               |
-| `work-ghost.html`         | Ghost icon hover effect                        |
-| `work/project-1.html`     | Standard single project layout                 |
-| `project-lightbox.html`   | Project page with image lightbox functionality |
-| `project-full-width.html` | Full-width project layout                      |
-| `about.html`              | Two-column responsive About page               |
-| `components.html`         | Reusable UI components for quick editing       |
-| `404.html`                | Custom 404 error page                          |
+| Page Name                     | Description                                    |
+| ----------------------------- | ---------------------------------------------- |
+| `index.html`                  | Holding page (optional intro/splash)           |
+| `work.html`                   | Classic work grid layout                       |
+| `work-sidebar.html`           | Work grid with sticky sidebar navigation       |
+| `work-titles-below.html`      | Project titles below thumbnails                |
+| `work-clean.html`             | Clean version with no overlays                 |
+| `work-grayscale.html`         | Grayscale image filter variation               |
+| `work-ghost.html`             | Ghost icon hover effect                        |
+| `work/dripp-coffee-gear.html` | Standard single project layout                 |
+| `project-lightbox.html`       | Project page with image lightbox functionality |
+| `project-full-width.html`     | Full-width project layout                      |
+| `about.html`                  | Two-column responsive About page               |
+| `components.html`             | Reusable UI components for quick editing       |
+| `404.html`                    | Custom 404 error page                          |
 
 ### ✨ Features at a Glance
 
