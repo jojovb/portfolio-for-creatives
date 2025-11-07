@@ -677,6 +677,12 @@ a.nav-link-primary:hover {
 }
 
 .hero-header {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  background-color: #fff;
+  backdrop-filter: blur(8px);
+  z-index: 1000;
   min-height: 6rem; /* Space reserved for logo + nav */
 }
 
@@ -694,6 +700,10 @@ a.nav-link-primary:hover {
 }
 .nav-branding-item {
   padding: var(--padding-tiny);
+  transition: transform 0.3s;
+  &:hover {
+    transform: translateY(-4px);
+  }
 }
 
 .nav-branding-logo {
@@ -833,6 +843,10 @@ a.nav-link-primary:hover {
   width: 100%;
   height: auto;
   position: relative; /* Needed to position the overlay */
+  transition: transform 0.3s;
+  &:hover {
+    transform: translateY(-8px);
+  }
 }
 /* Masonry Overlay Text */
 .overlay-container:hover .overlay {
@@ -871,11 +885,6 @@ a.nav-link-primary:hover {
 .work-page-grid-item:hover .overlay {
   visibility: visible; /* Make overlay visible on hover */
   opacity: 1; /* Set opacity on hover */
-}
-
-/* Optional container for future overlay customization */
-.project-details-overlay {
-  /* Placeholder: no custom styles yet */
 }
 
 /* 
