@@ -449,10 +449,9 @@ h2 {
 }
 
 h3 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: var(--font-family-special);
-  line-height: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: var(--h3-color);
 }
 
@@ -479,7 +478,6 @@ h6 {
   font-family: var(--font-family-body);
   font-weight: 400;
   line-height: normal;
-  margin-bottom: 1rem;
   color: var(--h6-color);
 }
 
@@ -676,12 +674,11 @@ a.nav-link-primary:hover {
   flex-direction: row;
 }
 
-.hero-header {
+.nav-header {
   position: sticky;
   width: 100%;
   top: 0;
-  background-color: #fff;
-  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.85);
   z-index: 1000;
   min-height: 6rem; /* Space reserved for logo + nav */
 }
@@ -699,7 +696,7 @@ a.nav-link-primary:hover {
   flex-direction: row;
 }
 .nav-branding-item {
-  padding: var(--padding-tiny);
+  padding: var(--padding-small);
   transition: transform 0.3s;
   &:hover {
     transform: translateY(-4px);
@@ -708,14 +705,27 @@ a.nav-link-primary:hover {
 
 .nav-branding-logo {
   width: 5rem;
+  vertical-align: middle;
   /* TODO: Adjust the width of the logo on mobile devices here */
+}
+
+.nav-branding-name {
+  display: none;
+}
+
+.nav-branding-logo-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .hero-section {
   background-image: url("../assets/hero/grass.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 80vh;
   width: 100%;
-  background-repeat: no-repeat;
 }
 
 .hero-headline-wrapper {
@@ -1228,7 +1238,7 @@ to keep your styles reusable and consistent.
 */
 
 .play-page {
-  /* Add page-specific layout or container styles here */
+  width: 100%;
 }
 
 /*
@@ -1246,7 +1256,10 @@ to keep your styles reusable and consistent.
 /* Medium devices (tablets, 768px and up) */
 
 @media (min-width: 768px) {
-  /* TODO: Adjust  layout for tablets */
+  .nav-branding-name {
+    padding: var(--padding-small);
+    display: inline-block;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -1277,7 +1290,7 @@ to keep your styles reusable and consistent.
   }
 
   h3 {
-    font-size: 1.625rem;
+    font-size: 2.25rem;
   }
 
   .h1-full-width,
