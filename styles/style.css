@@ -1008,6 +1008,7 @@ a.nav-link-primary:hover {
 
 /* Apply this class to ALL list items (awards, works, social, bullets) */
 .footer-item {
+  color: #fff
   line-height: 1.2; /* Consistent line height for footer items to improve spacing */
   margin-bottom: 0.25rem;
 }
