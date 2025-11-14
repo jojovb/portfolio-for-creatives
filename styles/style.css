@@ -141,7 +141,6 @@
   --color-bg-full-width: #ffffff;
   --color-bg-project-description: #ffffff;
   /* Special Elements */
-  --color-icon-heart: #ffffff;
   --color-text-holding-footer: #ffffff;
   --color-bg-selection: #6a8a69;
   --color-shadow-stroke: rgba(0, 0, 0, 0.4);
@@ -720,7 +719,8 @@ a.nav-link-primary:hover {
 }
 
 .hero-section {
-  background-image: url("../assets/hero/grass.jpg");
+  background-image: url("../assets/hero/hero-leaf.jpg");
+  background-color: #00452d;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -956,7 +956,8 @@ a.nav-link-primary:hover {
   grid-gap: 3rem; /* Consistent spacing between sections */
   min-height: auto; /* Allows footer to expand based on content, no fixed height */
   background: var(--color-bg-footer); /* Using CSS variable for theming */
-  padding: var(--padding-small); /* Internal spacing */
+
+  padding: var(--padding-medium); /* Internal spacing */
 
   /* Note: Using 'fr' units ensures proper scaling across devices */
 }
@@ -969,6 +970,10 @@ a.nav-link-primary:hover {
 .footer-tagline {
   grid-column: 1 / 2; /* Full width (single column) */
   grid-row: 1 / 2;
+}
+
+.footer-email {
+  grid-column: auto;
 }
 
 .footer-contact-social {
@@ -989,9 +994,7 @@ a.nav-link-primary:hover {
 /* ------------------------------- */
 /* 📜 Reusable footer list styles */
 /* ------------------------------- */
-.footer-list {
-  margin-bottom: 2rem;
-}
+
 .footer-awards-list {
   margin-bottom: 2rem;
 }
@@ -999,6 +1002,8 @@ a.nav-link-primary:hover {
   margin-bottom: 2rem;
 }
 .footer-socials-list {
+  display: flex;
+  align-items: center;
   margin-bottom: 2rem;
 }
 
@@ -1008,7 +1013,8 @@ a.nav-link-primary:hover {
 
 /* Apply this class to ALL list items (awards, works, social, bullets) */
 .footer-item {
-  color: #fff
+  color: #fff;
+  padding: var(--padding-medium);
   line-height: 1.2; /* Consistent line height for footer items to improve spacing */
   margin-bottom: 0.25rem;
 }
