@@ -38,11 +38,8 @@
 /* Public Sans Font (For body text) */
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* Syne Tactile Font (For special text) */
-@import url("https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap");
-
-/* Inter Font (great for readability and minimal design) */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* Slackside One Font (For special text) */
+@import url("https://fonts.googleapis.com/css2?family=Slackside+One&display=swap");
 
 /*
 
@@ -60,15 +57,6 @@
 /* ------------------------------- */
 
 /* TODO: Delete any stylesheets you don't plan to use on your site. */
-
-/* File for adding a smooth animated gradient background */
-@import url("animated-gradient.css");
-
-/* File for animation effects that make elements move (e.g., flying) */
-@import url("make-something-fly.css");
-
-/* File for animation effects that make elements blink */
-@import url("make-something-blink.css");
 
 /* File with extra experimental styles (e.g., fun animations or effects) */
 @import url("experiments.css");
@@ -99,7 +87,7 @@
   --font-family-body: "Public Sans", sans-serif;
   --font-family-heading: "BIZ UDPMincho", serif;
   --font-family-project-title: "Public Sans", sans-serif;
-  --font-family-special: "Syne Tactile", system-ui;
+  --font-family-special: "Slackside One", cursive;
   /* Core Colours */
   --color-text-primary: #020a03;
   --color-text-secondary: #fff;
@@ -448,7 +436,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-family: var(--font-family-special);
   margin-bottom: 0.5rem;
   color: var(--h3-color);
@@ -1293,11 +1281,7 @@ to keep your styles reusable and consistent.
   }
 
   h2 {
-    font-size: 2.25rem;
-  }
-
-  h3 {
-    font-size: 2.25rem;
+    font-size: 3.5rem;
   }
 
   .h1-full-width,
