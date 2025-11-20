@@ -501,7 +501,7 @@ sup {
 /* Main hero headline — usually sits in the intro section */
 .hero-headline {
   color: #fff; /* Uses your brand's dominant color */
-  max-width: 40ch; /* Optimal line length for readability (~40 characters) */
+  max-width: 36ch; /* Optimal line length for readability (~40 characters) */
   text-wrap: balance; /* Prevents awkward line breaks (like elegant typography) */
   margin-inline: auto; /* Horizontally centers the text in its container */
 }
@@ -906,6 +906,13 @@ a.nav-link-primary:hover {
   grid-row: 2 / 3; /* Text spans the second row */
 }
 
+.image-grow {
+  transition: transform 0.3s;
+  &:hover {
+    transform: scale(1.05) rotate(-4deg);
+  }
+}
+
 /* 
 
 ███████  ██████   ██████  ████████ ███████ ██████  
@@ -985,7 +992,7 @@ a.nav-link-primary:hover {
 /* Apply this class to ALL list items (awards, works, social, bullets) */
 .footer-item {
   color: #fff;
-  padding: var(--padding-medium);
+  padding: var(--padding-small);
   line-height: 1.2; /* Consistent line height for footer items to improve spacing */
   margin-bottom: 0.25rem;
 }
