@@ -94,8 +94,7 @@
   --color-accent-primary: #fff;
   --color-accent-secondary: #336a40;
   --color-overlay-primary: #00452d;
-  --color-highlight: #ffd258;
-  --color-fallback: #336a40; /* Fallback color for glitch effect on 404 page */
+  --color-highlight: ##6a8a69;
   /* Backgrounds */
   --color-bg: #ffffff;
   --color-bg-about: #ffffff;
@@ -115,16 +114,14 @@
   --color-text-project-title: #020a03;
   --color-text-work-grid-title: #020a03;
   /* Link States */
-  --color-link: #336a40;
-  --color-link-hover: #336a40;
-  --color-link-visited: #00452d;
+  --color-link: #6a8a69;
+  --color-link-hover: #6a8a69;
+  --color-link-visited: #000;
   /* Navigation */
   --color-nav-link: #6a8a69;
   --color-nav-link-hover: #6a8a69;
-  --color-nav-arrow: #6a8a69;
-  --color-nav-arrow-hover: #000;
-  --color-nav-arrow-stroke: #6a8a69;
-  --color-nav-arrow-stroke-hover: #000;
+  --color-nav-arrow: #000;
+  --color-nav-arrow-hover: #6a8a69;
   /* Components */
   --color-bg-full-width: #ffffff;
   --color-bg-project-description: #ffffff;
@@ -622,20 +619,6 @@ a.nav-link-primary:hover {
 .navigation-arrow:active,
 .navigation-arrow:hover {
   color: var(--color-nav-arrow-hover);
-}
-
-/* 🖋️ Optional stroke effect for a bold, outlined arrow look */
-
-.stroke:link,
-.stroke:visited {
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--color-nav-arrow-stroke);
-}
-
-.stroke:active,
-.stroke:hover {
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--color-nav-arrow-stroke-hover);
 }
 
 /* 
