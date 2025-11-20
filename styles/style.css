@@ -1206,10 +1206,6 @@ a.nav-link-primary:hover {
   margin: 0 auto;
 }
 
-.error-page-animation {
-  width: 25rem;
-}
-
 /*
 
 ██████  ██       █████  ██    ██ 
@@ -1342,6 +1338,7 @@ to keep your styles reusable and consistent.
 
   .error-404 {
     font-size: 5rem;
+    color: #000;
   }
 
   /* Work Page Grid for Large Devices */
