@@ -458,9 +458,9 @@ h5 {
 }
 
 h6 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-family: var(--font-family-body);
-  font-weight: 400;
+  font-weight: 300;
   line-height: normal;
   color: var(--h6-color);
 }
@@ -501,9 +501,10 @@ sup {
 /* Main hero headline — usually sits in the intro section */
 .hero-headline {
   color: #fff; /* Uses your brand's dominant color */
-  max-width: 36ch; /* Optimal line length for readability (~40 characters) */
+  max-width: 40ch; /* Optimal line length for readability (~40 characters) */
   text-wrap: balance; /* Prevents awkward line breaks (like elegant typography) */
   margin-inline: auto; /* Horizontally centers the text in its container */
+  margin-bottom: 2rem;
 }
 
 /* Large project title — appears on individual project pages */
@@ -692,6 +693,7 @@ a.nav-link-primary:hover {
 .hero-section {
   background-image: url("../assets/hero/hero-leaf.jpg");
   background-color: #00452d;
+  display: flex;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -704,7 +706,7 @@ a.nav-link-primary:hover {
   display: flex;
   flex-direction: row;
   flex: 1;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   text-align: left;
   padding: var(--padding-medium);
@@ -981,8 +983,12 @@ a.nav-link-primary:hover {
 }
 .footer-socials-list {
   display: flex;
-  justify-content: flex-end;
-  margin-bottom: 2rem;
+  justify-content: space-around;
+}
+
+.social-icon {
+  width: 4rem;
+  height: 4rem;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -1332,17 +1338,6 @@ to keep your styles reusable and consistent.
     grid-gap: 1rem;
   }
 
-  /* Grayscale filter with full-colour on hover and tap */
-
-  .work-page-grid-item a.grayscale img {
-    filter: grayscale(100);
-  }
-
-  .work-page-grid-item > a.grayscale:active img,
-  .work-page-grid-item > a.grayscale:hover img {
-    filter: grayscale(0);
-  }
-
   /* Padding around work grid and project page */
 
   .portfolio,
@@ -1362,17 +1357,6 @@ to keep your styles reusable and consistent.
 
   .project-wrapper-full-width {
     padding: var(--padding-small) var(--padding-jumbo);
-  }
-
-  /* Sidebar on Large Devices */
-
-  .project-aside {
-    width: 35%;
-    height: 80vh;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 8rem;
-    padding-right: 2rem;
   }
 
   /* Main Project Image Area on Large Devices */
@@ -1433,6 +1417,12 @@ to keep your styles reusable and consistent.
     padding-bottom: 0;
     padding-left: var(--padding-jumbo);
     grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+  }
+
+  .footer-socials-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
   }
 
   /* Column 1: Tagline/Message */
