@@ -1096,8 +1096,6 @@ a.nav-link-primary:hover {
 /* Container for project description */
 .project-description-container {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
   flex-direction: column;
   background: var(--color-bg-project-description);
   padding: var(--padding-small);
@@ -1108,8 +1106,8 @@ a.nav-link-primary:hover {
 /* Column styles for two-column and four-column layouts (mobile-first) */
 .col-2,
 .col-4 {
-  width: 100%;
-  padding: var(--padding-small);
+  width: 80%;
+  padding: var(--padding-medium);
 }
 
 .project-header-image {
