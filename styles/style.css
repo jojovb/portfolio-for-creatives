@@ -177,7 +177,7 @@
 html {
   box-sizing: border-box; /* Makes sure padding and borders don't add extra width to elements */
   scroll-behavior: smooth; /* Adds smooth scrolling between sections */
-  cursor: url("../assets/icons8-cursor.png"), auto !important; /* Custom cursor (change the URL below to use your own) */
+  cursor: url("../assets/round-cursor.svg"), auto !important; /* Custom cursor (change the URL below to use your own) */
 
   /* TODO: Replace the URL above to add a custom cursor. 
      If you want to use the default browser cursor, just delete this line. */
@@ -400,6 +400,7 @@ svg {
   justify-content: space-between;
   padding: var(--padding-small);
   align-items: flex-start;
+  font-weight: 400;
 }
 
 /* ------------------------------------------------------------------ */
@@ -989,6 +990,11 @@ a.nav-link-primary:hover {
 .social-icon {
   width: 4rem;
   height: 4rem;
+}
+
+.email-link {
+  text-decoration: underline;
+  color: #fff;
 }
 
 /* -------------------------------------------------------------------------- */
