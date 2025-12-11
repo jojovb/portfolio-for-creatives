@@ -91,7 +91,7 @@ These are great first steps to customize your portfolio visually without writing
    👉 For a longer bio, open `about.html` and replace the demo text with your story.
 
 6. **Edit your project pages**  
-   Open `work/dripp-coffee-gear.html`, `work/capstone.html`, or `project-3`.  
+   Open `work/dripp-coffee-gear.html`, `work/motiv-productivity.html`, or `project-3`.  
    Replace the placeholder title and description with your actual project details.
 
 After making these changes, visit your live site to see the changes in action!

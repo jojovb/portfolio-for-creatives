@@ -1110,16 +1110,8 @@ a.nav-link-primary:hover {
   padding: var(--padding-medium);
 }
 
-.project-header-image {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 80vh;
-  margin-bottom: 1rem;
-}
-
 /* Project image styling */
+
 .project-image {
   width: 100%;
   display: flex;
@@ -1127,6 +1119,7 @@ a.nav-link-primary:hover {
   justify-content: center;
   margin-bottom: 1rem;
 }
+
 /* Project details section */
 .project-details {
   width: 100%;
@@ -1364,6 +1357,22 @@ to keep your styles reusable and consistent.
   }
 
   /* Main Project Image Area on Large Devices */
+
+  .project-header-image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .project-image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
 
   .project-details {
     width: 65%;
