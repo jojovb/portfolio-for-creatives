@@ -85,9 +85,9 @@
 :root {
   /* Typography */
   --font-family-body: "Public Sans", sans-serif;
-  --font-family-heading: "BIZ UDPMincho", serif;
+  --font-family-heading: "rl-horizon", sans-serif;
   --font-family-project-title: "Public Sans", sans-serif;
-  --font-family-special: "Slackside One", cursive;
+  --font-family-special: "rl-horizon", sans-serif;
   /* Core Colours */
   --color-text-primary: #020a03;
   --color-text-secondary: #fff;
@@ -696,7 +696,7 @@ a.nav-link-primary:hover {
 }
 
 .hero-section {
-  background-image: url("../assets/hero/green-background.jpg");
+  background-image: url("../assets/hero/hero-green-background.jpg");
   background-color: #9eb153;
   display: flex;
   background-position: center;
@@ -1318,7 +1318,7 @@ to keep your styles reusable and consistent.
   }
 
   .nav-branding-logo {
-    width: 5rem;
+    width: 4rem;
     /* TODO: Adjust the width of the logo on large devices here. */
   }
 
