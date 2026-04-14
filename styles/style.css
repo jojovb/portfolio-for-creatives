@@ -92,9 +92,9 @@
   --color-text-primary: #020a03;
   --color-text-secondary: #fff;
   --color-accent-primary: #fff;
-  --color-accent-secondary: #336a40;
-  --color-overlay-primary: #00452d;
-  --color-highlight: ##6a8a69;
+  --color-accent-secondary: #83934b;
+  --color-overlay-primary: #83934b;
+  --color-highlight: ##83934b;
   /* Backgrounds */
   --color-bg: #ffffff;
   --color-bg-about: #ffffff;
@@ -115,19 +115,19 @@
   --color-text-work-grid-title: #020a03;
   /* Link States */
   --color-link: #000;
-  --color-link-hover: #6a8a69;
+  --color-link-hover: #83934b;
   --color-link-visited: #000;
   /* Navigation */
-  --color-nav-link: #6a8a69;
-  --color-nav-link-hover: #6a8a69;
+  --color-nav-link: #83934b;
+  --color-nav-link-hover: #83934b;
   --color-nav-arrow: #000;
-  --color-nav-arrow-hover: #6a8a69;
+  --color-nav-arrow-hover: #83934b;
   /* Components */
   --color-bg-full-width: #ffffff;
   --color-bg-project-description: #ffffff;
   /* Special Elements */
   --color-text-holding-footer: #ffffff;
-  --color-bg-selection: #6a8a69;
+  --color-bg-selection: #83934b;
   --color-shadow-stroke: rgba(0, 0, 0, 0.4);
   /* Assets */
   --image-noise-texture: url(/assets/temp/noise.svg);
@@ -697,7 +697,7 @@ a.nav-link-primary:hover {
 
 .hero-section {
   background-image: url("../assets/hero/hero-green-background.jpg");
-  background-color: #9eb153;
+  background-color: #a9a54a;
   display: flex;
   background-position: center;
   background-repeat: no-repeat;
